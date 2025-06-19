@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday, Tiya 🎂</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <audio id="bgMusic" src="ishq-wala-love.mp3" autoplay loop></audio>
+
+  <div class="centered">
+    <h1>Happy Birthday, Baby ♥️</h1>
+    <p class="quote">"In a world full of blinding lights, you are the moonlight that unbinds me."</p>
+    <button onclick="toggleMusic()">🔊 Play / Pause Music</button>
+
+    <div id="countdown" class="countdown"></div>
+  </div>
+
+  <section class="zigzag">
+    <div class="zigzag-item left">
+      <img src="memory4.jpeg" alt="Memory 1" />
+      <p>Happy Birthday my gullu 🥹
+        You’re finally turning 19 — and I can’t tell you how lucky I feel to be a part of this special day in your life.
+        
+        This photo of yours… I find it sho sho sho cute, I genuinely don’t have words for how it melts my heart every time I look at it! 🥺✨
+        
+        I swear, I’m way more excited for your birthday than you are! Like a kid waiting outside a cake shop! 😭💗
+        
+        Thank you for being the light in my life, and for giving me the chance to celebrate you.
+        
+        Here’s to your 19th, and to many more birthdays we’ll share — together, hand in hand. 🎂🌙
+        
+        I love you, Tiya. Happy 19th, my moonlight. 🌸💞</p>
+    </div>
+    <div class="zigzag-item right">
+      <img src="memory6.jpeg" alt="Memory 2" />
+      <p>This photo... UGHHH 😫
+        I swear I fell in love all over again when you showed me this!
+        
+        It’s just so innocent, so lovely, so cute, and honestly—what not! 😭💘
+        
+        And I have to say… the way you placed that gun? Absolute chef’s kiss 🤌
+        That’s some commendable planning, madam.
+        
+        I always knew you had a brilliant mind — but I didn’t know ki bachpan se hi itna dimaag chal raha hai babyji ka 😭💥
+        
+        My mastermind, my cutie, my Gullu. 💞</p>
+    </div>
+    <div class="zigzag-item left">
+      <img src="memory5.jpeg" alt="Memory 3" />
+      <p>You smiled... and I knew — I had found my person.
+
+        I love you, Baby — and I truly can’t thank you enough for giving me this chance.
+        I can’t thank God enough for giving me YOU!
+        
+        I mean… just look at you!!
+        In this photo, you look so pyaari, so magical — Touchwood 🧿
+        
+        Hamesha aisi hi pyaari rehna…
+        Aur hamesha mujhse pyaar karti rehna, Tiya. 🤍
+        
+        Through every chaos, your presence is my calm.
+        Happy Birthday, my love. 🎂✨</p>
+    </div>
+  </section>
+
+  <img src="catimage.png" alt="Cute Animated Cat" class="animated-cat" />
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    function toggleMusic() {
+      if (music.paused) music.play();
+      else music.pause();
+    }
+
+    // Countdown to June 20
+    const countdown = document.getElementById("countdown");
+    const target = new Date("June 20, 2025 00:00:00").getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = target - now;
+      const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((distance % (1000 * 60)) / 1000);
+      countdown.innerHTML = `🎂 Birthday in: ${d}d ${h}h ${m}m ${s}s`;
+    }, 1000);
+  </script>
+</body>
+<footer>
+  Made with ❤️ by her Boyfriend ;p
+</footer>
+</html>

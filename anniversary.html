@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>6-Month Anniversary 💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <audio id="bgMusic" src="die-for-you.mp3" autoplay loop></audio>
+
+  <div class="centered">
+    <h1>Our 6-Month Journey 💞</h1>
+    <p class="quote">“With you, half a year feels like forever — and yet, just the beginning.”</p>
+    <button onclick="toggleMusic()">🎶 Play / Pause Music</button>
+
+    <div id="countdown" class="countdown"></div>
+  </div>
+
+  <section class="zigzag">
+    <div class="zigzag-item left">
+      <img src="memory7.jpeg" alt="Memory A" />
+      <p>Remember this day?
+        It was the start of forever. 💫
+        
+        We really are way too photogenic, don’t you think? 😄
+        
+        I never thought I’d be able to love someone the way I love you, Tiya.
+        And yet, here we are — 6 months later — still falling, still growing.
+        
+        I know I’ve been a bit of a mess lately… I haven’t given you the time or presence you deserve.
+        But please know — it was never because I didn’t care.
+        
+        I love you more than I can put into words.
+        And I promise I’m trying. For us. For you.</p>
+    </div>
+    <div class="zigzag-item right">
+      <img src="memory3.jpeg" alt="Memory B" />
+      <p>You’ve been my strength, my peace, and my adventure. 🥹
+
+        This photo? It’s the best one we have together.
+        Just look at us — my heart feels full every time I do.
+        Mera pyaar tere liye na kabhi kam hua hai, na kabhi hoga.
+        I love you way too much, baby.
+        
+        Main itni mehnat kabhi kisi ke liye nahi karta...
+        But you? You’re different. You’re special.
+        That’s why I’m putting my heart into this — because you deserve it all.
+        
+        Actually, you deserve so much more than this,
+        but I PROMISE, I’ll give you the world someday.
+        I MEAN IT.
+        
+        You are worth every love song ever written.
+        Because **YOU ARE WAY TOOOO PERFECT FOR ME MERI JAAN!**
+        And I’m the luckiest person alive to have you. 💖</p>
+    </div>
+    <div class="zigzag-item left">
+      <img src="memory1.jpeg" alt="Memory C" />
+      <p>Six months in, and I’d still choose you — over and over. 💘
+
+        This photo holds a very special place in my heart.
+        It was — and still is — way too perfect.
+        The moment we took this, everything felt right... and it still does.
+        
+        Tera presence mujhe sukoon deta hai.
+        And honestly? Main yeh sukoon apni zindagi bhar chahta hoon.
+        Kabhi bola nahi... but today I will:
+        
+        Tiya, I’m too afraid to lose you.
+        
+        So, aaj firse pooch raha hoon —
+        WILL YOU BE MINE FOREVER? 💍💞
+        
+        </p>
+    </div>
+  </section>
+
+  <img src="catimage.png" alt="Cute Animated Cat" class="animated-cat" />
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    function toggleMusic() {
+      if (music.paused) music.play();
+      else music.pause();
+    }
+
+    // Countdown to June 21
+    const countdown = document.getElementById("countdown");
+    const target = new Date("June 21, 2025 00:00:00").getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = target - now;
+      const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((distance % (1000 * 60)) / 1000);
+      timer.innerHTML = `💗 Anniversary in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    }, 1000);
+  </script>
+</body>
+<footer>
+  Made with ❤️ by her Boyfriend ;p
+</footer>
+</html>
